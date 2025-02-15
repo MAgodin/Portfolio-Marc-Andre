@@ -5,34 +5,31 @@ import { motion } from "framer-motion";
 export function Projects() {
   const projects = [
     {
-      title: "E-commerce Platform",
+      title: "Site Web pour Stéphane Godin",
       description:
-        "Une plateforme e-commerce complète avec panier, paiement et gestion des commandes.",
+        "Site web en développement pour Stéphane Godin, un professionnel dans le domaine de [spécialité]. Ce projet est réalisé avec HTML, CSS, et JavaScript et sera mis en ligne très bientôt.",
       image:
-        "https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&q=80&w=800",
-      technologies: ["React", "Node.js", "MongoDB", "Stripe"],
-      githubLink: "#",
-      liveLink: "#",
+        "https://via.placeholder.com/800x400?text=St%C3%A9phane+Godin+Website", // Placeholder image, replace with actual image
+      technologies: ["HTML", "CSS", "JavaScript"],
+      githubLink: "https://github.com/MAgodin/Stephane-Godin",
+      liveLink: "#", // Live link once the website is online
     },
     {
-      title: "Task Management App",
+      title: "Cap'able",
       description:
-        "Application de gestion de tâches avec fonctionnalités collaboratives.",
+        "Cap'able est une initiative visant à favoriser l'inclusion des personnes en situation de vulnérabilité, avec des solutions d'assistance virtuelle.",
       image:
-        "https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?auto=format&fit=crop&q=80&w=800",
-      technologies: ["Vue.js", "Express", "PostgreSQL", "Socket.io"],
-      githubLink: "#",
-      liveLink: "#",
+        "https://via.placeholder.com/800x400?text=Cap%27able+Project", // Placeholder image, replace with actual image
     },
     {
-      title: "Portfolio Personnel",
+      title: "Mon Portfolio",
       description:
-        "Site web portfolio responsive présentant mes projets et compétences.",
+        "Site web portfolio responsive présentant mes projets, compétences et ma passion pour le développement web. Il est conçu avec React, Tailwind CSS et TypeScript.",
       image:
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
+        "https://via.placeholder.com/800x400?text=Mon+Portfolio", // Placeholder image, replace with actual image
       technologies: ["React", "Tailwind CSS", "TypeScript"],
-      githubLink: "#",
-      liveLink: "#",
+      githubLink: "#", // Add GitHub link for your portfolio code
+      liveLink: "#", // Link to your live portfolio
     },
   ];
 
@@ -89,39 +86,47 @@ export function Projects() {
               <p className="text-gray-300 mb-4">{project.description}</p>
 
               {/* Technologies utilisées */}
-              <div className="flex flex-wrap gap-2 mb-4">
-                {project.technologies.map((tech, techIndex) => (
-                  <motion.span
-                    key={techIndex}
-                    whileHover={{ scale: 1.1 }}
-                    className="px-3 py-1 bg-gray-700 text-orange-500 rounded-full text-sm"
-                  >
-                    {tech}
-                  </motion.span>
-                ))}
-              </div>
+              {project.technologies && (
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {project.technologies.map((tech, techIndex) => (
+                    <motion.span
+                      key={techIndex}
+                      whileHover={{ scale: 1.1 }}
+                      className="px-3 py-1 bg-gray-700 text-orange-500 rounded-full text-sm"
+                    >
+                      {tech}
+                    </motion.span>
+                  ))}
+                </div>
+              )}
 
-              {/* Liens GitHub et Demo */}
-              <div className="flex space-x-4">
-                <a
-                  href={project.githubLink}
-                  className="flex items-center text-gray-300 hover:text-orange-500 transition-colors"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Github size={20} className="mr-1" />
-                  Code
-                </a>
-                <a
-                  href={project.liveLink}
-                  className="flex items-center text-gray-300 hover:text-orange-500 transition-colors"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <ExternalLink size={20} className="mr-1" />
-                  Demo
-                </a>
-              </div>
+              {/* Liens GitHub et Demo (Supprimé pour Cap'able) */}
+              {project.githubLink && (
+                <div className="flex space-x-4">
+                  <a
+                    href={project.githubLink}
+                    className="flex items-center text-gray-300 hover:text-orange-500 transition-colors"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Github size={20} className="mr-1" />
+                    Code
+                  </a>
+                </div>
+              )}
+              {project.liveLink && (
+                <div className="flex space-x-4 mt-2">
+                  <a
+                    href={project.liveLink}
+                    className="flex items-center text-gray-300 hover:text-orange-500 transition-colors"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <ExternalLink size={20} className="mr-1" />
+                    Demo
+                  </a>
+                </div>
+              )}
             </div>
           </motion.div>
         ))}

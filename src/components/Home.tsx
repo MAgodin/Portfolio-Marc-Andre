@@ -1,6 +1,7 @@
 import React from "react";
 import { Github, Linkedin, Mail } from "lucide-react";
 import { motion } from "framer-motion";
+import MyPicture from "../assets/MyPicture.jpg";
 
 export function Home() {
   // Variants for animations
@@ -35,10 +36,10 @@ export function Home() {
         className="w-48 h-48 md:w-64 md:h-64 mb-8 md:mb-0 md:mr-12"
       >
         <motion.img
-          src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200&h=200"
+          src={MyPicture}
           alt="Profile"
-          className="w-full h-full rounded-full object-cover shadow-lg border-4 border-orange-500"
-          whileHover={{ scale: 1.05 }}
+          className="w-full h-full rounded-full object-contain shadow-lg border-4 border-orange-500"
+          whileHover={{ scale: 1.1 }}
         />
       </motion.div>
 
@@ -52,7 +53,7 @@ export function Home() {
           variants={fadeIn}
           className="text-5xl font-bold text-white mb-4"
         >
-          Votre Nom
+          Marc-André Godin
         </motion.h1>
 
         {/* Title */}
@@ -60,7 +61,7 @@ export function Home() {
           variants={fadeIn}
           className="text-xl text-orange-500 mb-6 font-medium"
         >
-          Développeur Web Full Stack
+          Apprenti Développeur
         </motion.p>
 
         {/* Description */}
@@ -68,9 +69,9 @@ export function Home() {
           variants={fadeIn}
           className="text-lg text-gray-300 mb-8 leading-relaxed"
         >
-          Passionné par le développement web et les nouvelles technologies. Je
-          crée des solutions innovantes et élégantes pour répondre aux besoins
-          de mes clients.
+          Passionné par le développement, la cybersécurité et les nouvelles technologies. Je
+          recherche constamment à apprendre et à m'améliorer. Actuellement en recherche d'une 
+          alternance pour ma formation ASR (Administrateur Système et réseau) au CESI.
         </motion.p>
 
         {/* Social Links */}
@@ -79,7 +80,7 @@ export function Home() {
           className="flex space-x-6 justify-center md:justify-start"
         >
           <motion.a
-            href="#"
+            href="https://github.com/MAgodin"
             className="text-gray-300 hover:text-orange-500 transition-colors duration-300"
             target="_blank"
             rel="noopener noreferrer"
@@ -88,7 +89,7 @@ export function Home() {
             <Github size={28} />
           </motion.a>
           <motion.a
-            href="#"
+            href="https://www.linkedin.com/in/marc-andré-godin/"
             className="text-gray-300 hover:text-orange-500 transition-colors duration-300"
             target="_blank"
             rel="noopener noreferrer"
@@ -97,7 +98,7 @@ export function Home() {
             <Linkedin size={28} />
           </motion.a>
           <motion.a
-            href="mailto:votre@email.com"
+            href="mailto:marcandregodin.cjn@gmail.com"
             className="text-gray-300 hover:text-orange-500 transition-colors duration-300"
             whileHover={{ scale: 1.2 }}
           >

@@ -11,6 +11,28 @@ function App() {
   const [currentPage, setCurrentPage] = useState("home");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  // Function to render navigation buttons
+  const renderNavButtons = () => {
+    return ["home", "experience", "skills", "projects", "contact"].map(
+      (page) => (
+        <button
+          key={page}
+          onClick={() => setCurrentPage(page)}
+          className={`${
+            currentPage === page
+              ? "text-orange-500 font-semibold border-b-2 border-orange-500"
+              : "text-white hover:text-orange-500"
+          } transition-colors duration-200 px-3 py-2`}
+          aria-label={`Aller à la page ${
+            page.charAt(0).toUpperCase() + page.slice(1)
+          }`}
+        >
+          {page.charAt(0).toUpperCase() + page.slice(1)}
+        </button>
+      )
+    );
+  };
+
   const renderPage = () => {
     switch (currentPage) {
       case "home":
@@ -44,29 +66,16 @@ function App() {
             <button
               onClick={() => setCurrentPage("home")}
               className="flex items-center"
+              aria-label="Revenir à la page d'accueil"
             >
               <span className="text-xl font-bold text-orange-500 hover:text-orange-600 transition-colors duration-200">
-                Portfolio
+                Marc-André Godin
               </span>
             </button>
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-8">
-              {["home", "experience", "skills", "projects", "contact"].map(
-                (page) => (
-                  <button
-                    key={page}
-                    onClick={() => setCurrentPage(page)}
-                    className={`${
-                      currentPage === page
-                        ? "text-orange-500 font-semibold border-b-2 border-orange-500"
-                        : "text-white hover:text-orange-500"
-                    } transition-colors duration-200 px-3 py-2`}
-                  >
-                    {page.charAt(0).toUpperCase() + page.slice(1)}
-                  </button>
-                )
-              )}
+              {renderNavButtons()}
             </div>
 
             {/* Mobile menu button */}
@@ -74,6 +83,7 @@ function App() {
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
                 className="text-white hover:text-orange-500 transition-colors duration-200"
+                aria-label={isMenuOpen ? "Fermer le menu" : "Ouvrir le menu"}
               >
                 {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
               </button>
@@ -105,6 +115,9 @@ function App() {
                           ? "bg-orange-500 text-black"
                           : "text-white hover:bg-orange-500 hover:text-black"
                       } transition-colors duration-200 font-medium`}
+                      aria-label={`Aller à la page ${
+                        page.charAt(0).toUpperCase() + page.slice(1)
+                      }`}
                     >
                       {page.charAt(0).toUpperCase() + page.slice(1)}
                     </button>

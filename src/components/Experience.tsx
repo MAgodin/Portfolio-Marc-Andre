@@ -1,6 +1,10 @@
 import React from "react";
 import { Briefcase, GraduationCap } from "lucide-react";
 import { motion } from "framer-motion";
+import vertMarine from "../assets/vert-marine.jpg";
+import Lacoste from "../assets/logo-lacoste.jpg";
+import Formation from "../assets/formation.jpg";
+import CESI from "../assets/CESI.png";
 
 export function Experience() {
   // Animation variants
@@ -36,28 +40,43 @@ export function Experience() {
         </div>
 
         <div className="space-y-8">
-          {/* Diplôme d'Ingénieur */}
           <motion.div
             whileHover={{ scale: 1.02 }}
-            className="border-l-4 border-orange-500 pl-6 bg-gray-800 p-6 rounded-lg shadow-lg"
+            className="flex flex-col md:flex-row items-start border-l-4 border-orange-500 pl-6 bg-gray-800 p-6 rounded-lg shadow-lg"
           >
-            <div className="text-sm text-orange-500 mb-2">2020 - 2023</div>
-            <h4 className="text-2xl font-semibold text-white mb-2">
-              Diplôme d'Ingénieur en Informatique
-            </h4>
-            <p className="text-gray-300">École d'ingénieurs</p>
+            <div className="flex-1">
+              <div className="text-sm text-orange-500 mb-2">à partir de 2025</div>
+              <h4 className="text-2xl font-semibold text-white mb-2">
+                En recherche d'une formation pour ASR ou Cybersécurité
+              </h4>
+              {/*<p className="text-gray-300">description</p>*/}
+            </div>
+            {/* Image */}
+            <img
+              src={Formation}
+              alt="Formation"
+              className="mt-4 md:mt-0 ml-0 md:ml-8 w-32 h-32 object-cover rounded-lg"
+            />
           </motion.div>
 
-          {/* DUT Informatique */}
+          {/* Formation CESI - Développement Informatique */}
           <motion.div
             whileHover={{ scale: 1.02 }}
-            className="border-l-4 border-orange-500 pl-6 bg-gray-800 p-6 rounded-lg shadow-lg"
+            className="flex flex-col md:flex-row items-start border-l-4 border-orange-500 pl-6 bg-gray-800 p-6 rounded-lg shadow-lg"
           >
-            <div className="text-sm text-orange-500 mb-2">2018 - 2020</div>
-            <h4 className="text-2xl font-semibold text-white mb-2">
-              DUT Informatique
-            </h4>
-            <p className="text-gray-300">IUT</p>
+            <div className="flex-1">
+              <div className="text-sm text-orange-500 mb-2">2023 - 2025</div>
+              <h4 className="text-2xl font-semibold text-white mb-2">
+                Formation CESI - Développement Informatique
+              </h4>
+              <p className="text-gray-300">CESI Saint-Étienne-du-Rouvray</p>
+            </div>
+            {/* Image */}
+            <img
+              src={CESI}
+              alt="Formation CESI"
+              className="mt-4 md:mt-0 ml-0 md:ml-8 w-32 h-32 object-cover rounded-lg"
+            />
           </motion.div>
         </div>
       </motion.div>
@@ -70,38 +89,69 @@ export function Experience() {
         </div>
 
         <div className="space-y-8">
-          {/* Développeur Full Stack */}
+          {/* Alternance Développeur Informatique */}
           <motion.div
             whileHover={{ scale: 1.02 }}
-            className="border-l-4 border-orange-500 pl-6 bg-gray-800 p-6 rounded-lg shadow-lg"
+            className="flex flex-col md:flex-row items-start border-l-4 border-orange-500 pl-6 bg-gray-800 p-6 rounded-lg shadow-lg"
           >
-            <div className="text-sm text-orange-500 mb-2">2023 - Présent</div>
-            <h4 className="text-2xl font-semibold text-white mb-2">
-              Développeur Full Stack
-            </h4>
-            <p className="text-gray-300 mb-4">Entreprise Tech</p>
-            <ul className="list-disc list-inside text-gray-300 space-y-2">
-              <li>Développement d'applications web</li>
-              <li>Gestion de projets agiles</li>
-              <li>Collaboration avec les équipes design</li>
-            </ul>
+            <div className="flex-1">
+              <div className="text-sm text-orange-500 mb-2">
+                Oct. 2023 - Oct. 2025
+              </div>
+              <h4 className="text-2xl font-semibold text-white mb-2">
+                Alternance Développeur Informatique
+              </h4>
+              <p className="text-gray-300 mb-4">Vert-Marine, Rouen</p>
+              <ul className="list-disc list-inside text-gray-300 space-y-2">
+                <li>Développement d’applications web en Angular</li>
+                <li>Création et gestion de bases de données relationnelles</li>
+                <li>
+                  Réalisation de cahiers des charges et collecte des besoins
+                  clients
+                </li>
+                <li>
+                  Résolution de bugs et amélioration des applications existantes
+                </li>
+              </ul>
+            </div>
+            {/* Image */}
+            <img
+              src={vertMarine}
+              alt="Expérience"
+              className="mt-4 md:mt-0 ml-0 md:ml-8 w-32 h-32 object-cover rounded-lg"
+            />
           </motion.div>
 
-          {/* Stage Développeur Frontend */}
+          {/* CDI Vendeur Lacoste */}
           <motion.div
             whileHover={{ scale: 1.02 }}
-            className="border-l-4 border-orange-500 pl-6 bg-gray-800 p-6 rounded-lg shadow-lg"
+            className="flex flex-col md:flex-row items-start border-l-4 border-orange-500 pl-6 bg-gray-800 p-6 rounded-lg shadow-lg"
           >
-            <div className="text-sm text-orange-500 mb-2">2022 - 2023</div>
-            <h4 className="text-2xl font-semibold text-white mb-2">
-              Stage Développeur Frontend
-            </h4>
-            <p className="text-gray-300 mb-4">Startup Innovante</p>
-            <ul className="list-disc list-inside text-gray-300 space-y-2">
-              <li>Développement d'interfaces utilisateur</li>
-              <li>Optimisation des performances</li>
-              <li>Intégration d'APIs</li>
-            </ul>
+            <div className="flex-1">
+              <div className="text-sm text-orange-500 mb-2">
+                Juin - Décembre 2023
+              </div>
+              <h4 className="text-2xl font-semibold text-white mb-2">
+                CDI Vendeur (Samedi uniquement)
+              </h4>
+              <p className="text-gray-300 mb-4">
+                Lacoste, McArthurGlen, Douains
+              </p>
+              <ul className="list-disc list-inside text-gray-300 space-y-2">
+                <li>Accompagnement et conseil client</li>
+                <li>Gestion de rayon de plus de 200 produits</li>
+                <li>
+                  Contribution à un taux de fidélisation client estimé à plus de
+                  60%
+                </li>
+              </ul>
+            </div>
+            {/* Image */}
+            <img
+              src={Lacoste}
+              alt="Vendeur Lacoste"
+              className="mt-4 md:mt-0 ml-0 md:ml-8 w-48 h-32 object-cover rounded-lg"
+            />
           </motion.div>
         </div>
       </motion.div>
