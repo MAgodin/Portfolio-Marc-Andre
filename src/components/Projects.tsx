@@ -1,35 +1,35 @@
 import React from "react";
 import { ExternalLink, Github } from "lucide-react";
 import { motion } from "framer-motion";
+import SiteStephane from "../assets/Site-Stephane.png";
+import capable from "../assets/capable.png";
+import portfolio from "../assets/Portfolio.png";
 
 export function Projects() {
   const projects = [
     {
       title: "Site Web pour Stéphane Godin",
       description:
-        "Site web en développement pour Stéphane Godin, un professionnel dans le domaine de [spécialité]. Ce projet est réalisé avec HTML, CSS, et JavaScript et sera mis en ligne très bientôt.",
-      image:
-        "https://via.placeholder.com/800x400?text=St%C3%A9phane+Godin+Website", // Placeholder image, replace with actual image
-      technologies: ["HTML", "CSS", "JavaScript"],
+        "Site web en développement pour Stéphane Godin, un professionnel dans le domaine de la psychologie. Ce projet est réalisé en react, tailwind CSS, et TypeScript et sera mis en ligne très bientôt.",
+      image: SiteStephane,
+      technologies: ["React", "Tailwind CSS", "TypeScript"],
       githubLink: "https://github.com/MAgodin/Stephane-Godin",
-      liveLink: "#", // Live link once the website is online
+      liveLink: "#",
     },
     {
       title: "Cap'able",
       description:
         "Cap'able est une initiative visant à favoriser l'inclusion des personnes en situation de vulnérabilité, avec des solutions d'assistance virtuelle.",
-      image:
-        "https://via.placeholder.com/800x400?text=Cap%27able+Project", // Placeholder image, replace with actual image
+      image: capable,
     },
     {
       title: "Mon Portfolio",
       description:
         "Site web portfolio responsive présentant mes projets, compétences et ma passion pour le développement web. Il est conçu avec React, Tailwind CSS et TypeScript.",
-      image:
-        "https://via.placeholder.com/800x400?text=Mon+Portfolio", // Placeholder image, replace with actual image
+      image: portfolio,
       technologies: ["React", "Tailwind CSS", "TypeScript"],
-      githubLink: "#", // Add GitHub link for your portfolio code
-      liveLink: "#", // Link to your live portfolio
+      githubLink: "https://github.com/MAgodin/Portfolio-Marc-Andre",
+      liveLink: "#",
     },
   ];
 

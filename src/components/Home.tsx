@@ -33,12 +33,12 @@ export function Home() {
       {/* Profile Image (Left) */}
       <motion.div
         variants={scaleUp}
-        className="w-48 h-48 md:w-64 md:h-64 mb-8 md:mb-0 md:mr-12"
+        className="w-48 h-48 md:w-64 md:h-64 mb-8 md:mb-0 md:mr-12 mt-[-100px]"
       >
         <motion.img
           src={MyPicture}
           alt="Profile"
-          className="w-full h-full rounded-full object-contain shadow-lg border-4 border-orange-500"
+          className="w-full h-100 object-cover shadow-lg border-4 border-orange-500 ml-[-50px]"
           whileHover={{ scale: 1.1 }}
         />
       </motion.div>
@@ -69,9 +69,10 @@ export function Home() {
           variants={fadeIn}
           className="text-lg text-gray-300 mb-8 leading-relaxed"
         >
-          Passionné par le développement, la cybersécurité et les nouvelles technologies. Je
-          recherche constamment à apprendre et à m'améliorer. Actuellement en recherche d'une 
-          alternance pour ma formation ASR (Administrateur Système et réseau) au CESI.
+          Passionné par le développement, la cybersécurité et les nouvelles
+          technologies. Je recherche constamment à apprendre et à m'améliorer.
+          Actuellement en recherche d'une alternance pour ma formation ASR
+          (Administrateur Système et réseau) au CESI.
         </motion.p>
 
         {/* Social Links */}
