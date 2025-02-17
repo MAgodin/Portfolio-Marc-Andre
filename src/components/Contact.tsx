@@ -1,9 +1,7 @@
-import React from "react";
 import { Mail, Phone, Download } from "lucide-react";
 import { motion } from "framer-motion";
 
 export function Contact() {
-  // Animation variants
   const fadeIn = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
@@ -12,8 +10,8 @@ export function Contact() {
   // Fonction pour télécharger le CV
   const handleDownloadCV = () => {
     const link = document.createElement("a");
-    link.href = "/CV_Marc-André_Godin.pdf"; // Remplacez par le chemin réel de votre CV
-    link.download = "CV_Marc-André_Godin.pdf"; // Nom du fichier à télécharger
+    link.href = "/CV_Marc-André_Godin.pdf";
+    link.download = "CV_Marc-André_Godin.pdf";
     link.click();
   };
 

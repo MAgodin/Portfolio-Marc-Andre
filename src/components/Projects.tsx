@@ -1,4 +1,3 @@
-import React from "react";
 import { ExternalLink, Github } from "lucide-react";
 import { motion } from "framer-motion";
 import SiteStephane from "../assets/Site-Stephane.png";
@@ -32,16 +31,11 @@ export function Projects() {
       liveLink: "#",
     },
   ];
-
-  // Animation variants
   const fadeIn = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
   };
 
-  const hoverScale = {
-    hover: { scale: 1.05, transition: { duration: 0.3 } },
-  };
 
   return (
     <motion.div

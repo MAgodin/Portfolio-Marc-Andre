@@ -1,9 +1,8 @@
-import React, { useState } from "react";
-import { Code, Database, Monitor, Package, Settings, Cpu, FileText, Github, Laptop, Palette, Save } from "lucide-react";
+import { useState } from "react";
+import { Code, Database, Monitor, Package, Cpu, FileText, Github, Laptop, Palette, Save } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 export function Skills() {
-  // Animation variants
   const fadeIn = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },

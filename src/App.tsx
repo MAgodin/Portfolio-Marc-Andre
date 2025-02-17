@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Home } from "./components/Home";
 import { Experience } from "./components/Experience";
 import { Skills } from "./components/Skills";
@@ -50,7 +50,6 @@ function App() {
     }
   };
 
-  // Animation variants for the mobile menu
   const menuVariants = {
     open: { opacity: 1, y: 0, transition: { duration: 0.3 } },
     closed: { opacity: 0, y: "-100%", transition: { duration: 0.3 } },

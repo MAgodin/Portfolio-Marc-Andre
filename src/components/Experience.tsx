@@ -1,4 +1,3 @@
-import React from "react";
 import { Briefcase, GraduationCap } from "lucide-react";
 import { motion } from "framer-motion";
 import vertMarine from "../assets/vert-marine.jpg";
@@ -7,15 +6,11 @@ import Formation from "../assets/formation.jpg";
 import CESI from "../assets/CESI.png";
 
 export function Experience() {
-  // Animation variants
   const fadeIn = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
   };
 
-  const hoverScale = {
-    hover: { scale: 1.05, transition: { duration: 0.3 } },
-  };
 
   return (
     <motion.div
