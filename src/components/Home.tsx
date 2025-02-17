@@ -70,8 +70,8 @@ export function Home() {
           className="text-lg text-gray-300 mb-8 leading-relaxed"
         >
           Passionné par le développement, la cybersécurité et les nouvelles
-          technologies. Je recherche constamment à apprendre et à m'améliorer.
-          Actuellement en recherche d'une alternance pour ma formation ASR
+          technologies. Je cherche constamment à apprendre et à m'améliorer.
+          Je suis actuellement en recherche d'une alternance pour ma formation ASR
           (Administrateur Système et réseau) au CESI.
         </motion.p>
 

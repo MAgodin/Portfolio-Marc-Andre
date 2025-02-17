@@ -12,7 +12,7 @@ export function Contact() {
   // Fonction pour télécharger le CV
   const handleDownloadCV = () => {
     const link = document.createElement("a");
-    link.href = "/chemin/vers/votre-cv.pdf"; // Remplacez par le chemin réel de votre CV
+    link.href = "/CV_Marc-André_Godin.pdf"; // Remplacez par le chemin réel de votre CV
     link.download = "CV_Marc-André_Godin.pdf"; // Nom du fichier à télécharger
     link.click();
   };
@@ -45,7 +45,7 @@ export function Contact() {
             <Mail className="text-orange-500 mr-3 mt-1" size={20} />
             <div>
               <h4 className="font-medium text-white">Email</h4>
-              <p className="text-gray-300">votre@email.com</p>
+              <p className="text-gray-300">marcandregodin.cjn@gmail.com</p>
             </div>
           </div>
           <div className="flex items-start">
